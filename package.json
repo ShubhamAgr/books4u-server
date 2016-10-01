@@ -1,0 +1,35 @@
+{
+  "name": "books4u-server",
+  "version": "1.0.0",
+  "description": "build in paytm hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubhamAgr/books4u-server.git"
+  },
+  "author": "Shubham Agrawal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubhamAgr/books4u-server/issues"
+  },
+  "dependencies":{
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "jsonwebtoken": "^7.1.6",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^1.4.8",
+    "unirest": "^0.5.0",
+    "mongodb":"latest",
+    "bcryptjs":"latest",
+    "mongoose":"latest"
+  },
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/ShubhamAgr/books4u-server#readme"
+}
