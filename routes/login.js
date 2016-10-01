@@ -1,6 +1,8 @@
+var login  = require('../config/login')
 module.exports = function(app) {
   app.get('/login',function(req,res){
-    var token = req.body.token;
-    res.send("This is login");
+    login.Dologin(req.body.email,function(response){
+      res.json(response);
+    });
   });
 }

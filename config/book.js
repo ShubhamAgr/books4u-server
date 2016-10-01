@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Book = require(./models.books);
+var Book = require("../models.books");
 
 module.exports.getBooks = function(callback){
     Book.find(callback);

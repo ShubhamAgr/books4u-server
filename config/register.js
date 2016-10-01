@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var usermodel = require('./models/users');
+var usermodel = require('../models/users');
 
 // exports.isUserAlreadyExist = function(email,callback){
 //     usermodel.find({'email':email},function(err,user){
@@ -9,4 +9,4 @@ var usermodel = require('./models/users');
 //         callback({"msg":true})
 //       }
 //     });
-}
+// }
