@@ -1,9 +1,9 @@
 var user = require(./config/users)
 
-exports.addtoLend = function(req,callback){
+exports.addToSale = function(req,callback){
 		var email = req.body.email;
 		User.findOneAndUpdate({"email":email},
-			{$addToSet:{"books_borrowed":{"_id":new mongoose.Types.ObjectId(),"bookId":req.body.bookId,"date":new Date(),"from":req.body.fromId}}}
+			{$addToSet:{"books_forSale":{"_id":new mongoose.Types.ObjectId(),"bookId":req.body.bookId,"markedPrice":req.body.markedPrice,"costPrice":req.body.costPrice}}}
 		,{safe:true,upsert:true},function(err){
 			if(err){
 				console.log(err);

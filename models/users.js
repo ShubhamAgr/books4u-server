@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+ var mongoose = require('mongoose');
 var schema = mongoose.Schema;
 var id = mongoose.Schema.Types.ObjectId;
 
@@ -11,14 +11,15 @@ var addressinfo = {
 };
 var userSchema = new schema({
   _id : id,
-  username : {type:String,default:null},
-  password : {type:String},
+  username : {type:String,required:true,unique:true},
+  password : {type:String,default:null},
   email:{type:String},
   loginInfo:{
       isLogin:{type:Boolean},
       fbLoginToken:{
         token:{type:String},
         timestamp:{type:String},
+        LoginLocations : [String],
         isExpired:{type:Boolean}
       }
   }
@@ -26,18 +27,15 @@ var userSchema = new schema({
     permanent_address:addressinfo,
     temporary_address:[addressinfo]
   },
-  LoginLocations : [String],
   books_borrowed:[{
       bookId : id,
       date : {type:Date},
-      from:{type:String},
-      timestamp:{type:String},
+      from:{type:String}
     }],
   books_lend:[{
       bookId : id,
       date : {type:Date},
       to:{type:String},
-      timestamp:{type:String},
     }],
   books_wishList:[book_id],
   books_forSale:[{
@@ -49,4 +47,5 @@ var userSchema = new schema({
     bookId : id,
     soldPrice:{type:Integer}
   }],
-})
+},{collection:'users'});
+	module.exports = mongoose.model('user',userSchema);

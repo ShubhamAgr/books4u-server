@@ -8,5 +8,4 @@ var mongoose = require('mongoose');
 const url = "mongodb://localhost:27017/books4u-server"
 mongoose.connect(url);
 
-/*requiring my own configurations*/
 require('./routes.js')(app);
