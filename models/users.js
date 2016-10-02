@@ -11,9 +11,9 @@ var addressinfo = {
 };
 var userSchema = new schema({
   _id : id,
-  username : {type:String,required:true,unique:true},
+  username : {type:String,default:null},
   password : {type:String,default:null},
-  email:{type:String},
+  email:{type:String,unique:true},
   // loginInfo:{
   //     isLogin:{type:Boolean},
   //     fbLoginToken:{

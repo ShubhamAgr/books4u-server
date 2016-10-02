@@ -1,4 +1,4 @@
-var user = require(./config/users)
+var user = require('../models/users');
 
 exports.addTowishlist = function(req,callback){
 		var email = req.body.email;
@@ -7,9 +7,9 @@ exports.addTowishlist = function(req,callback){
 		,{safe:true,upsert:true},function(err){
 			if(err){
 				console.log(err);
-				callback(false);
+				callback({"msg":"false"});
 			}else{
-				callback(true);
+				callback({"msg":"true"});
 			}
 		});
 	}

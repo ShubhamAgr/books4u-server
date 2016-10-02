@@ -4,7 +4,6 @@ module.exports = function(app) {
   login(app);
   register(app);
   app.get('/',function(req,res){
-    console.log(xyz);
     res.status(200).send("This request is for Home Page");
   });
 

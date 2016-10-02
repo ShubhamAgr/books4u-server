@@ -7,9 +7,9 @@ exports.addToSale = function(req,callback){
 		,{safe:true,upsert:true},function(err){
 			if(err){
 				console.log(err);
-				callback(false);
+				callback({"msg":"false"});
 			}else{
-				callback(true);
+				callback({"msg":"true"});
 			}
 		});
 	}
