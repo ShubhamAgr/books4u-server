@@ -1,4 +1,4 @@
-var user = require('../models.users');
+var User = require("../models/users")
 
 exports.buyBooks = function(req,callback){
 		var email = req.body.email;

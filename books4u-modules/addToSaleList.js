@@ -1,4 +1,4 @@
-var user = require(./config/users)
+var user = require('../config/user')
 
 exports.addToSale = function(req,callback){
 		var email = req.body.email;

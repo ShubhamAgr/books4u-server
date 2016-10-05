@@ -15,7 +15,7 @@ app.get('/user/:email',function(req,res){
 });
 app.post('/user/addUser',function(req,res){
  user.addUser(req.body.email,function(response){
-res.json(response);
+ res.json(response);
  });
 });
 }

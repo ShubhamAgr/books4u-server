@@ -1,4 +1,4 @@
-var addToWishList = require('../config/addToWishList');
+var addToWishList = require('../config/addToWishlist');
 
 module.exports = function(app){
   app.post('/addToWishList',function(req,res){
